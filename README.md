@@ -13,3 +13,5 @@ npm run start<br>
 
 remember: pm2 - npm ( sudo npm i -g pm2 (pm2 start npm -- start)),<br>
 and ip address for database
+
+pm2 stop 0 - stop process
