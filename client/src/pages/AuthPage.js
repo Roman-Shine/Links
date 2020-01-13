@@ -17,6 +17,10 @@ export const AuthPage = () => {
     clearError();
   }, [error, message, clearError ]);
 
+  useEffect(() => {
+    window.M.updateTextFields();
+  }, []);
+
   const changeHandler = event => {
     setForm({ ...form, [event.target.name]: event.target.value });
   };
@@ -50,6 +54,7 @@ export const AuthPage = () => {
                   type="email"
                   name="email"
                   className="validate"
+                  value={form.email}
                   onChange={ changeHandler }
                 />
                 <label htmlFor="email">Введите ваш email</label>
@@ -61,8 +66,9 @@ export const AuthPage = () => {
                   id="password"
                   type="password"
                   name="password"
-                  minlength="6"
+                  minLength="6"
                   className="validate"
+                  value={form.password}
                   onChange={ changeHandler }
                 />
                 <label htmlFor="password">Введите ваш пароль</label>
