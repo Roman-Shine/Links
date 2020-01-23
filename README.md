@@ -1,6 +1,8 @@
 # Links
 Links app on MERN stack
 
+#Claster mongodb (in defoult cinfig file) has been deleted
+
 Start development mode: <br>
 npm run dev
 
